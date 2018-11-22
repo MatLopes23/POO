@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1443113687 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.6\main.cpp
+	<iostream>
+	<InterSet.h>
+	<vector>
+	<stdlib.h>
+
+1444229523 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.6\src\interset.cpp
+	"InterSet.h"
+	<array>
+	<iostream>
+	<fstream>
+	<string>
+
+1444229543 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.6\include\interset.h
+	<array>
+
+1443117287 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.6\main.cpp
+	<iostream>
+	<InterSet.h>
+	<vector>
+	<stdlib.h>
+
+1444233143 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.6\include\interset.h
+	<array>
+
+1444233123 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.6\src\interset.cpp
+	"InterSet.h"
+	<array>
+	<iostream>
+	<fstream>
+	<string>
+

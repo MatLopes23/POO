@@ -1,0 +1,309 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage[brazilian]{babel} 
+\usepackage[ansinew]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{lmodern}
+\usepackage{amsfonts} 
+\usepackage{enumerate}
+\setcounter{secnumdepth}{4} %
+\setcounter{tocdepth}{4}
+
+\title{Relatório}
+\vspace{2cm}
+
+\author{Davidson dos Santos Dias\\
+ Mateus Fellipe Alves Lopes \\
+}
+
+
+\begin{document} 
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução}
+O trabalho tem como objetivo apresentar uma introdução a programação orientada a objetos com conceitos de classes e suas instâncias, a utilização de classes pré-definidas pela linguagem, como, por exemplo, string, vector e ifstream, a utilização de constantes e alocação dinâmica de memória, etc.\\\\
+A programação orientada a objetos surgiu com o principal objetivo de unir os dados e funções em um único elemento: o objeto. O objeto é um estado de uma classe, sendo uma classe é um tipo definido pelo usuário, semelhante a uma estrutura, com o adicional que funções também podem ser inseridas. Estas funções (métodos) vão agir sobre os dados (atributos) da classe.
+\\
+\section{Desenvolvimento}
+	
+	Especificações das questões propostas utilizando programação orientada a objetos.
+\subsection{\textit{rot13}}
+	A questão 2.1 insere conceitos de criptografia através da implementação do algoritmo rot13, utilizando a manipulação de arquivos para leitura e gravação em novos arquivos dos dados gerados pelo programa, aplicando funções da biblioteca \textbf{fstream}.\\\\
+Propomos a solução deste problema com a utilização da tabela ASCII para a criptografia dos caracteres contidos nos arquivos a serem manipulados pelas funções \textbf{ifstream} e \textbf{ofstream}, sendo a função \textbf{ifstream} responsável em abrir e ler os arquivos e a \textbf{ofstream} pela criação e inserção de dados no arquivo desejado.
+\\
+
+\subsection{\textit{vector<string>}}
+	Na questão 2.2 fizemos a leitura de um arquivo utilizando a função \textbf{ifstream}, criamos \textbf{vector} de \textbf{strings} e armazenando cada palavra em uma posição do vector, em seguida usamos a função: \textbf{std::sort(v.begin(),v.end())} para ordenar seus elementos.\\
+
+\subsection{\textit{CWindow}}
+	Na questão 2.3 criamos uma classe \textbf{CWindow} para representar uma janela, utilizando objetos de classes distintas como atributos, \textbf{Canvas} e \textbf{Color}, a classe CWindow encapsula a classe Canvas que por sua vez contêm instâncias da classe Color.
+	\subsubsection{\textit{Color}}
+	Na classe \textbf{Color} encapsulamos cores em formato \textbf{RGB}, para isso utilizamos uma \textit{struct} com três inteiros, e uma string para armazenar o nome da cor. Para criarmos objetos dessa classe usamos uma estratégia para facilitar a visualização e evitar grandes quantidades de dados nos parâmetros das funções, convertemos uma \textsl{string} com o nome da cor para seu respectivo formato \textbf{RGB}, função essa nomeada de \textbf{colorir()}. Para simplificar e reduzir o código consideramos apenas oito cores distintas sendo elas: branco (255,255,255), azul (0,0,255), vermelho (255,0,0), verde (0,255,0), amarelo (255,255,0), magenta (255,0,255), ciano (0,255,255) e preto (0,0,0).\\\\
+	O \textbf{construtor} por \textsl{default} recebe uma \textsl{string} com a cor branca que inicializa o objeto invocando a função \textit{colorir()} que converte a \textsl{string} para o formato RGB.
+	\paragraph{\textit{Métodos :}}
+	
+	Desenvolvemos o método \textbf{set\_Color()} que recebe o nome de uma cor e recorre ao método \textbf{colorir()} para preencher a \textsl{struct RGB} com os valores característicos da cor.
+	\textbf{Cor()} retornar a \textsl{string nome\_cor} contida na \textsl{struct RGB}.
+	
+	\paragraph{\textit{Parâmetros}}
+	
+	\begin{itemize}
+					\item \textit{Color(const string c="branco");}
+        
+					\item \textit{void set\_Color(const string c);}
+        
+					\item \textit{string Cor() const;}
+       
+				 \item  \textit{void colorir(const string c);}
+         
+			 \end{itemize}
+			
+\subsubsection{\textit{Canvas}}
+Classe aninhada que armazena atributos de desenho da janela: cor da fonte, tamanho da fonte, tipo de fonte, cor da pena, cor do pincel.\\\\
+\textbf{Construtor} não possui um método \textsl{default} pois \textbf{Canvas} sempre será inicializado no \textbf{construtor} de \textbf{CWindow} com todos os valores.
+
+\paragraph{\textit{Métodos :}}
+
+\textbf{set\_fonte()}, \textbf{set\_pena()}, \textbf{set\_pincel()}, \textbf{set\_tamanho()} e \textbf{set\_tipo\_fonte()} são métodos que recebem por parâmetros \textsl{constantes} e alteram os atributos do objeto. Os métodos que alteram as instâncias da classe \textbf{Color} chamam o método \textit{set\_Color()} pois os atributos dela são restritos para a classe \textbf{Canvas}.\\\\
+\textbf{get\_fonte()}, \textbf{get\_pena()}, \textbf{get\_pincel()}, \textbf{get\_tamanho()} e \textbf{get\_tipo\_fonte()} são métodos \textsl{constantes} que retornam os valores dos atributos do objeto. Os métodos para retornar fonte, pena e pincel invocam o método \textbf{Cor()} da classe \textbf{Color}.
+	
+	
+	\paragraph{\textit{Parâmetros}}
+	
+	\begin{itemize}
+					\item \textit{Canvas( const int tam\_fonte, const string tip\_fonte, const string font, const string pen, const string pince);}
+        
+					\item \textit{void set\_fonte(const string font);}
+        
+					\item \textit{void set\_pena(const string pen);}
+       
+				 \item  \textit{void set\_pincel(const string pince);}
+				
+				\item  \textit{void set\_tamanho(const int tamanho);}
+				
+				\item  \textit{void set\_tipo\_fonte(const string tipo\_font);}
+				
+				\item  \textit{string get\_fonte()const;}
+				
+				\item  \textit{string get\_pena()const;}
+				
+				\item  \textit{string get\_pincel()const;}
+				
+				\item  \textit{int get\_tamanho()const;}
+				
+				\item  \textit{string get\_tipo\_fonte()const.}
+			
+			 \end{itemize}
+			
+\subsubsection{\textit{CWindow}}
+A classe \textbf{CWindow} contém atributos que armazenam características da posição e dimensão da janela e um ponteiro do tipo \textbf{Canvas} com atributos de desenho da janela.\\\\
+O \textbf{construtor} do \textbf{CWindow} irá alocar o ponteiro da classe \textbf{Canvas} passando valores para o \textbf{construtor} da classe aninhada.
+
+\paragraph{\textit{Métodos :}}
+\textbf{Cset\_fonte()}, \textbf{Cset\_pena()}, \textbf{Cset\_pincel()}, \textbf{Cset\_tamanho()} e \textbf{Cset\_tipo\_fonte()} são métodos que recebem por parâmetros \textsl{constantes} e alteram os atributos do objeto. Os métodos que alteram as instâncias da classe \textbf{Canvas} chamando seus respectivos métodos, pois os atributos de \textbf{Canvas} são restritos para a classe \textbf{CWindow}.\\\\
+\textbf{Cget\_fonte()}, \textbf{Cget\_pena()}, \textbf{Cget\_pincel()}, \textbf{Cget\_tamanho()} e \textbf{Cget\_tipo\_fonte()} são métodos constantes que retornam os valores dos atributos do objeto. Os métodos para retornar invocam os métodos respectivos da classe \textbf{Canvas}.\\\\
+\textbf{move()} e \textbf{resive()} recebem novas características da posição e dimensão da janela, por parâmetros \textsl{constantes}.\\\\
+\textbf{show()} é um método \textsl{constante} que envia para a saída padrão a posição com largura e altura da janela.\\\\
+\textbf{LeDeArquivo()} recebe por parâmetro um \textsl{string} como \textsl{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser lido pela função \textbf{ifstream}, armazenando os valores na instancia da classe.\\\\
+\textbf{GravarArquivo()} recebe por parâmetro um \textsl{string} como \textsl{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser criado ou modificado pela função \textbf{ofstream}, armazenando  os dados da \textbf{CWindow}.\\\\
+\textbf{Destrutor} apenas desaloca o \textsl{ponteiro} da classe \textbf{Canvas} que foi alocado no \textbf{construtor} através da função \textbf{delete}.
+	
+	\paragraph{\textit{Parâmetros}}
+	
+	\begin{itemize}
+					\item \textit{CWindow(const int newx=0,const int newy=0,const int newcx=10,const int newcy=10, const int tam\_fonte=12, const string tip\_fonte="Arial", const string font="preto", const string pen="preto", const string pince="preto");}
+        
+					\item \textit{void show() const;}
+        
+					\item \textit{void move(const int newx,const int newy);}
+       
+				 \item  \textit{void resize(const int newcx,const int newcy);}
+				
+				\item  \textit {void Cset\_fonte(const string font);}
+				
+				\item  \textit{void Cset\_pena(const string pen);}
+				
+				\item  \textit{void Cset\_pincel(const string pince);}
+				
+				\item  \textit{void Cset\_tamanho(const int tamanho);}
+				
+				\item  \textit{void Cset\_tipo\_fonte(const string tipo\_font);}
+				
+				\item  \textit{string Cget\_fonte()const;}
+				
+				\item  \textit{string Cget\_pena()const;}
+				
+				\item  \textit{string Cget\_pincel()const;}
+				
+				\item  \textit{int Cget\_tamanho()const;}
+				
+				\item  \textit{string Cget\_tipo\_fonte()const;}
+				
+				\item  \textit{void LeDeArquivo(const std::string nomeArquivo);}
+				
+				\item  \textit{void GravarArquivo(const std::string nomeArquivo).}
+			
+			 \end{itemize}
+	
+	
+\subsection{\textit{CWindowSingleton}}
+	De forma análoga a questão 2.3, na questão 2.4 alteramos a classe \textbf{CWindow} para o padrão \textsl{singleton}, sendo possível criar apenas uma instancia para a esta classe. Para isso colocamos o construtor como privado e utilizamos o método \textbf{*Instace()} de tipo \textsl{static} como o único ponto de acesso ao construtor assim limitando a quantidade de objetos criados e retornado o endereço do objeto criado, para conseguirmos identificar se já existe um objeto da classes usamos o ponteiro também de tipo \textsl{static}, *\textbf{instaceptr}, para armazenar o endereço da primeira janela criada e retornar este endereço caso seja solicitado a criação de mais uma janela assim garantido que apenas um objeto seja criado.\\\\
+	
+	\subsubsection{\textit{Método e variavel static}}
+
+		\begin{itemize}
+					\item \textit{static CWindowSingleton *instaceptr;}
+        
+					\item \textit{static CWindowSingleton *Instace();}
+         
+			 \end{itemize}
+	
+
+\subsection{\textit{Racional}}
+Na questão 2.5 utilizamos a definição de classes para realizar operações com números racionais, inicialmente criamos uma classe chamada \textbf{Racional} com atributos privados do tipo inteiro para representar o numerador e denominador, e um método também privado para manter os números racionais no formato irredutível, optamos por criá-la privada pois é um método utilizado apenas pela própria classe.
+\\\\
+O \textbf{Construtor} por default inicializa o numerador e o denominador como 0 e 1 respectivamente, e tratamos o caso de entrado 0 para o denominador, pois isso geraria indeterminação, e usado o método de simplificação antes do número ser armazenado no objeto.\\
+
+\subsubsection{\textit{Métodos}}
+\textbf{subtrair()}, \textbf{multiplicar()}, \textbf{dividir()}, todos estes métodos tem o mesmo princípio de funcionalidade, onde vão receber objetos como \textit{constantes }por parâmetro e armazena resultado no formato irredutível em um  terceiro objeto (objeto invocador da função). \\\\
+O método \textbf{add()} define novos valores para o objeto a partir de dados fornecidos pelo usuário, por default o denominador recebe 1 para caso ele não seja especificado.\\\\
+Os métodos de impressão são \textit{constantes}, pois não ocorrerá modificação nos objetos, e são necessários pelo fato dos atributos serem privados a não termos acesso direto a eles.
+
+\subsubsection{\textit{Parâmetros}}
+	      
+				\begin{itemize}
+					\item \textit{Racional(int n=0,int d=1);}
+        
+					\item \textit{void add(const int n, int d=1);}
+        
+					\item \textit{void subtrair(const Racional a ,const Racional b);}
+       
+				 \item  \textit{void multiplicar(const Racional a,const Racional b);}
+        
+					\item \textit{void dividir(const Racional a, const Racional b);}
+       
+				 \item  \textit{void printflutuante()const ;}
+       
+				 \item  \textit{void print()const;} 
+			 \end{itemize}
+
+\subsection{\textit{IntegerSet}}
+			
+			Na questão 2.6 representamos os conjuntos com \textbf{arrays} do tipo \textbf{bool}, colocando \textbf{true} na posição que representa o valor contido no conjunto.\\Ex: A[9] =True => 9 pertence ao conjunto.\\\\
+			O array está encapsulado na classe nomeada como \textbf{IntegerSet}, juntamente com seus métodos.\\
+			O \textbf{construtor} irá criar por default um conjunto vazio.
+
+	\subsubsection{\textit{Métodos}}
+	\textbf{Uniao()} e\textbf{ Intersecao()}, são métodos que recebem por parâmetro dois objetos como \textit{constantes} e armazena o resultado em um terceiro objeto (objeto invocador da função).\\\\
+\textbf{Igual()} é um método \textit{constante} que  recebe por parâmetro outro objeto também  como \textit{constante} que será comparado com o objeto que invocou a função.\\\\
+\textbf{InsereElemento()} e \textbf{RemoveElemento()} inicialmente verificam se o valor fornecido é valido, posteriormente alteram o array de tamanho definido o valor na posição que representa o elemento do conjunto de false para true e true para false respectivamente.\\\\
+\textbf{LeDeArquivo()} recebe por parâmetro uma string como \textbf{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser lido pela função \textbf{ifstream}, armazenando todos os inteiros no objeto.\\\\
+No programa para testar a classe usamos um \textit{vector} para armazenar a quantidade de conjuntos desejado.
+
+\subsubsection{\textit{Parâmetros}}
+				\begin{itemize}
+					\item \textit{InterSet();}
+        
+					\item \textit{int InsereElemento(const int k);}
+        
+					\item \textit{int RemoveElemento(const int k);}
+       
+				 \item  \textit{void Uniao(const InterSet x,const InterSet y);}
+        
+					\item \textit{void Intersecao(const InterSet x,const InterSet y);}
+       
+				 \item  \textit{void Imprime() const ;}
+       
+				 \item  \textit{int Igual(const InterSet x) const;} 
+			
+				 \item  \textit{void LeDeArquivo(const string nomeArquivo); } 
+			 \end{itemize}
+
+\subsection{\textit{Lista simplesmente encadeada}}
+	Na questão 2.7 criamos uma lista simplesmente encadeada usando os conceitos de classes, para isso encapsulamos uma \textbf{struct} de nome \textbf{Link} para representar um nó da lista, a struct contém seu próprio construtor e destrutor, que serão invocados na criação e exclusão de nó no momento que se deseja inserir/excluir um elemento da lista.\\\\
+	A classe \textbf{Lista\_encadeada} tem como atributo o ponteiro da struct Link, que aponta para o início da lista. Por \textit{default} o \textbf{construtor} irá apontar o ponteiro *Lista para 0.
+	
+	\subsubsection{\textit{Métodos}}
+	\textbf{inserir()} inicialmente faz uma busca pela lista procurando a posição que o elemento será inserido de forma ordenada, quando não repetido. \\\\
+O método \textbf{remover()} assim como o \textbf{inserir()} faz uma busca pela lista a procura do elemento para exclui-lo.\\\\ 
+\textbf{procura()} recebe por parâmetro o elemento que se deseja localizar e retorna a posição do elemento se ele estiver contido na lista. \\\\
+\textbf{LeDeArquivo()} recebe por parâmetro um string como \textbf{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser lido pela função \textbf{ifstream}, armazenando todos os inteiros na lista.
+\textbf{GravarArquivo()} recebe por parâmetro um string como \textbf{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser criado ou modificado pela função \textbf{ofstream}, armazenando a lista no arquivo.\\\\
+O \textbf{destrutor} da classe ao ser invocado (final da execução) precisa invocar também o destrutor da \textit{struct} para que cada nó seja excluído separadamente.
+
+\subsubsection{\textit{Parâmetros}}
+			\begin{itemize}
+					\item \textit{Lista\_encadeada();}
+        
+					\item \textit{void inserir(const int d);}
+        
+					\item \textit{int procura(const int d)const;}
+       
+				 \item  \textit{void remover(const int d);}
+        
+					\item \textit{void imprimir()const;}
+       
+				 \item  \textit{void LeDeArquivo(const string nomeArquivo);}
+       
+				 \item  \textit{void GravarArquivo(const string nomeArquivo);} 
+			 \end{itemize}
+			
+\subsection{\textit{Matriz}}
+	
+	Resolvemos a questão 2.8 encapsulando uma matriz dinâmica do tipo \textbf{double} em uma classe chamada \textbf{Matriz}, que contém os atributos \textbf{linhas} e \textbf{colunas} do tipo \textbf{inteiro}, e um método privado \textbf{Alocar()} que aloca a memória de acordo com os valores de linha e coluna. 
+	\\\\Existem dois \textbf{construtores} na classe:
+	\begin{itemize}
+	\item O primeiro recebe o número de linhas e colunas criando uma matriz com essas dimensões e inicializando os elementos da matriz com 0, e por \textit{default} inicializa linha e coluna com 0, logo não aloca memória para a matriz, pois geraria conflito na modificação do mesmo posteriormente, já que a memória da matriz não poderia ser redefinida após a sua inicialização.\end{itemize}
+	\begin{itemize}
+	\item O segundo recebe por parâmetro uma \textbf{string} como \textbf{constante},indicando o nome de um arquivo, e inicializa a matriz a partir dos dados lidos do arquivo.\end{itemize}
+			
+	\subsubsection{\textit{Métodos}}
+	\textbf{somar()} recebe dois objetos como \textbf{constantes} por parâmetro e armazena o resultado em um  terceiro objeto (objeto invocador da função), retorna 0 caso as matrizes não coincidirem as dimensões.\\\\
+	\textbf{multiplicavector()} recebe um \textit{vector} e um objeto do tipo \textsl{Matriz} como \textbf{constantes} por parâmetro e armazena o resultado em um  terceiro objeto (objeto invocador da função).\\\\
+\textbf{grava()} recebe por parâmetro a \textit{referência} de uma \textit{string} como \textbf{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser criado ou modificado pela função \textbf{ofstream}, armazenando a matriz em disco.\\\\
+\textbf{inserir()},\textbf{imprimir()} e \textbf{size\_coluna()} são métodos que foram criados com o intuito de facilitar na manipulação do objeto no programa.\\\\
+O \textbf{destrutor} da classe ao ser invocado (final da execução) necessita desalocar a Matriz com o auxilio do destrutor da \textit{struct} Link, caso contrário desalocaria apenas o ponteiro.
+
+\subsubsection{\textit{Parâmetros}}
+		\begin{itemize}
+					\item \textit{Matriz(const int l=0,const int c=0);}
+				
+					\item \textit{Matriz(const string nomeArquivo);}
+			
+					\item \textit{void grava(const string}\&\textit{ filename)const;}
+       
+				 \item  \textit{int soma(const Matriz x, const Matriz y);}
+        
+					\item \textit{void multiplicavector(const Matriz m, const vector<double> vec);}
+       
+				 \item  \textit{void inserir();}
+			
+				 \item  \textit{void imprimir() const;}
+
+				 \item  \textit{void size\_coluna() const;}
+			 \end{itemize}
+\newpage
+\section{Conclusão}
+Concluímos que o trabalho foi de essencial importância para colocarmos em pratica conceitos apresentados em sala de aula, conceitos de criação de classes e instâncias (objetos) que são a base para a programação orientada a objetos e de utilização de classes pré-definidas. A principal dificuldades que tivemos foi a adaptação com um novo método de programação (Orientado a objetos), já que estávamos familiarizados com a programação estruturada.
+
+\section{Bibliografia}
+\begin{enumerate}
+\item Estivemos em discussão com a dupla de Jair Gomes e Kevin Jonas do 4º período de Engenharia de Sistemas, sobre os conceitos e usos de classes. Assim também sanamos duvidas com Juliana Miranda do 8º período de Engenharia de Sistemas.
+\item $cplusplus.com$
+\item $programacaodescomplicada.wordpress.com/2012/11/09/aula$-$64$-$alocacao$-$dinamica$-$pt$-$6$-$alocacao$-$de$-$matrizes$
+\item $www$-$usr.inf.ufsm.br/pozzer/disciplinas/cg\_5\_oo\_c++.pdf$
+\item $ic.unicamp.br/~everton/aulas/hardware/tabelaASCII.pdf$
+\item $hex.com.br/rot13$
+\item $www.uff.br/cdme/matrix/matrix$-$html/matrix\_color\_cube\\/matrix\_color\_cube\_br.html$
+
+
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1442962632 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.5\src\racional.cpp
+	"Racional.h"
+	<iostream>
+
+1444229450 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.5\include\racional.h
+
+1443728986 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.5\main.cpp
+	<iostream>
+	<cstdio>
+	<Racional.h>
+

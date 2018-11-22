@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1444422175 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.4\main.cpp
+	<iostream>
+	<CWindowSingleton.h>
+	<stdlib.h>
+
+1444431330 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.4\include\cwindowsingleton.h
+	<Color.h>
+
+1444416533 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.4\include\color.h
+	<string>
+
+1444416535 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.4\src\color.cpp
+	"Color.h"
+
+1444422175 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.4\src\cwindowsingleton.cpp
+	"CWindowSingleton.h"
+	<new>
+	<iostream>
+	<fstream>
+
+1444425775 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.4\main.cpp
+	<iostream>
+	<CWindowSingleton.h>
+	<stdlib.h>
+
+1444434930 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.4\include\cwindowsingleton.h
+	<Color.h>
+
+1444420133 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.4\include\color.h
+	<string>
+
+1444420135 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.4\src\color.cpp
+	"Color.h"
+
+1444438141 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.4\src\cwindowsingleton.cpp
+	"CWindowSingleton.h"
+	<new>
+	<iostream>
+	<fstream>
+

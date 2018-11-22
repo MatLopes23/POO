@@ -1,0 +1,445 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.6)  6 APR 2016 16:27
+entering extended mode
+**./Relatório_TP2.tex
+(Relatório_TP2.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) ("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.st
+y"
+Package: babel 2016/01/08 3.9n The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.c
+fg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-portuges\por
+tuges.ldf"
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@brazilian = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ansinew.def"
+File: ansinew.def 2015/03/17 v1.2c Input encoding file
+)) ("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.st
+y"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+ ("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)) ("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.
+sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\enumerate.st
+y"
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks17
+) (Relatório_TP2.aux)
+\openout1 = `Relatório_TP2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 19.
+
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 21.
+
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 21.
+
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 21.
+
+
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 21.
+
+
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 21.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 21.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/Users/mateu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(Relatório_TP2.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 4.
+)
+\tf@toc=\write3
+\openout3 = `Relatório_TP2.toc'.
+
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 57.
+("C:\Users\mateu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 57.
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
+
+ []
+
+[4]
+Overfull \hbox (43.5088pt too wide) in paragraph at lines 73--75
+ \T1/lmr/bx/n/12 2.3.2.1 \T1/lmr/bx/it/12 M�-to-dos :[] \T1/lmr/bx/n/12 set_fon
+te()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12 set_pena()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12
+ set_pincel()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12 set_tamanho()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+
+ []
+
+
+Overfull \hbox (39.89394pt too wide) in paragraph at lines 73--75
+\T1/lmr/bx/n/12 get_fonte()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12 get_pena()\T1/lmr/m
+/n/12 , \T1/lmr/bx/n/12 get_pincel()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12 get_tamanh
+o() \T1/lmr/m/n/12 e \T1/lmr/bx/n/12 get_tipo_fonte()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--107
+
+ []
+
+[5]
+Overfull \hbox (82.5088pt too wide) in paragraph at lines 109--116
+ \T1/lmr/bx/n/12 2.3.3.1 \T1/lmr/bx/it/12 M�-to-dos :[] \T1/lmr/bx/n/12 Cset_fo
+nte()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12 Cset_pena()\T1/lmr/m/n/12 , \T1/lmr/bx/n/
+12 Cset_pincel()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12 Cset_tamanho()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--116
+
+ []
+
+
+Overfull \hbox (88.64394pt too wide) in paragraph at lines 109--116
+\T1/lmr/bx/n/12 Cget_fonte()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12 Cget_pena()\T1/lmr
+/m/n/12 , \T1/lmr/bx/n/12 Cget_pincel()\T1/lmr/m/n/12 , \T1/lmr/bx/n/12 Cget_ta
+manho() \T1/lmr/m/n/12 e \T1/lmr/bx/n/12 Cget_tipo_fonte()
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--116
+
+ []
+
+
+Overfull \hbox (2.0964pt too wide) in paragraph at lines 120--121
+[]\T1/lmr/m/it/12 CWindow(const int newx=0,const int newy=0,const int newcx=10,
+const
+ []
+
+
+Overfull \hbox (41.57pt too wide) in paragraph at lines 120--121
+\T1/lmr/m/it/12 const string font="preto", const string pen="preto", const stri
+ng pince="preto"); 
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 169--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
+
+ []
+
+
+Overfull \hbox (5.19278pt too wide) in paragraph at lines 264--264
+[]\T1/lmr/m/n/12 O se-gundo re-cebe por pa-r�-me-tro uma \T1/lmr/bx/n/12 string
+ \T1/lmr/m/n/12 como \T1/lmr/bx/n/12 cons-tante\T1/lmr/m/n/12 ,indicando
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--272
+
+ []
+
+[11] [12]
+Overfull \hbox (25.05176pt too wide) in paragraph at lines 299--300
+[]$\OML/lmm/m/it/12 programacaodescomplicada:wordpress:com=\OT1/lmr/m/n/12 2012
+\OML/lmm/m/it/12 =\OT1/lmr/m/n/12 11\OML/lmm/m/it/12 =\OT1/lmr/m/n/12 09\OML/lm
+m/m/it/12 =aula$\T1/lmr/m/n/12 -$\OT1/lmr/m/n/12 64$\T1/lmr/m/n/12 -$\OML/lmm/m
+/it/12 alocacao$\T1/lmr/m/n/12 -
+ []
+
+[13] (Relatório_TP2.aux) ) 
+Here is how much of TeX's memory you used:
+ 1207 strings out of 493634
+ 16543 string characters out of 3135240
+ 71502 words of memory out of 3000000
+ 4584 multiletter control sequences out of 15000+200000
+ 68859 words of font info for 59 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 23i,6n,24p,778b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/mateu/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/enc/dvips/lm/lm-rm.enc}{C:/Users/mateu/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/enc/dvips/lm/lm-mathit.enc}{C:/Users/mateu/AppData/Local/Programs/MiKTeX 2.
+9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/mateu/AppData/Local/Programs/MiKTeX 2.
+9/fonts/enc/dvips/lm/lm-mathsy.enc}<C:/Users/mateu/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/mateu/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/mateu/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Users/mateu/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/mateu/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/mateu/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/mateu/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/mateu/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/mateu
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
+Output written on Relatório_TP2.pdf (13 pages, 214941 bytes).
+PDF statistics:
+ 87 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

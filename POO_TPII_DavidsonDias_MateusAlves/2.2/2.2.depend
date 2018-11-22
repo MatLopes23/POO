@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1442870470 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.2\main.cpp
+	<string>
+	<iostream>
+	<fstream>
+	<vector>
+	<algorithm>
+

@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1444415099 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.3\main.cpp
+	<iostream>
+	<CWindow.h>
+	<stdlib.h>
+
+1444434457 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.3\include\cwindow.h
+	<Color.h>
+
+1444413699 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.3\include\color.h
+	<string>
+
+1444413699 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.3\src\color.cpp
+	"Color.h"
+
+1444420711 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.3\src\cwindow.cpp
+	"CWindow.h"
+	<new>
+	<iostream>
+	<fstream>
+
+1444418699 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.3\main.cpp
+	<iostream>
+	<CWindow.h>
+	<stdlib.h>
+
+1444438057 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.3\include\cwindow.h
+	<Color.h>
+
+1444417299 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.3\include\color.h
+	<string>
+
+1444417299 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.3\src\color.cpp
+	"Color.h"
+
+1444438141 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.3\src\cwindow.cpp
+	"CWindow.h"
+	<new>
+	<iostream>
+	<fstream>
+

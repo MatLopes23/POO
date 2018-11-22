@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1443717316 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.7\main.cpp
+	<iostream>
+	<Lista_encadeada.h>
+	<stdlib.h>
+
+1444229693 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.7\include\lista_encadeada.h
+	<string>
+
+1443737505 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.7\src\lista_encadeada.cpp
+	"Lista_encadeada.h"
+	<iostream>
+	<fstream>
+
+1443720916 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.7\main.cpp
+	<iostream>
+	<Lista_encadeada.h>
+	<stdlib.h>
+
+1445281538 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.7\include\lista_encadeada.h
+	<string>
+
+1443741105 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpii_davidsondias_mateusalves\2.7\src\lista_encadeada.cpp
+	"Lista_encadeada.h"
+	<iostream>
+	<fstream>
+

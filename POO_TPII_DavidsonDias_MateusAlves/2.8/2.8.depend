@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1443799290 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.8\main.cpp
+	<iostream>
+	<Matriz.h>
+	<string>
+	<vector>
+
+1443799325 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.8\include\matriz.h
+	<string>
+	<vector>
+
+1443799335 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.8\src\matriz.cpp
+	"Matriz.h"
+	<new>
+	<cstring>
+	<iostream>
+	<fstream>
+	<vector>
+
+1443215906 source:d:\usuários\dsd\desktop\2.8\main.cpp
+	<iostream>
+	<Matriz.h>
+	<string>
+
+1443216502 d:\usuários\dsd\desktop\2.8\include\matriz.h
+	<string>
+
+1443216195 source:d:\usuários\dsd\desktop\2.8\src\matriz.cpp
+	"Matriz.h"
+	<new>
+	<cstring>
+	<iostream>
+	<fstream>
+
+1443236757 source:d:\usuários\dsd\desktop\poo_tp2_davidsondias_mateusalves\2.8\main.cpp
+	<iostream>
+	<Matriz.h>
+	<string>
+	<vector>
+
+1443236471 d:\usuários\dsd\desktop\poo_tp2_davidsondias_mateusalves\2.8\include\matriz.h
+	<string>
+	<vector>
+
+1443236471 source:d:\usuários\dsd\desktop\poo_tp2_davidsondias_mateusalves\2.8\src\matriz.cpp
+	"Matriz.h"
+	<new>
+	<cstring>
+	<iostream>
+	<fstream>
+	<vector>
+
