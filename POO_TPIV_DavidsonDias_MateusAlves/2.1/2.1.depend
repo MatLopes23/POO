@@ -1,0 +1,245 @@
+# depslib dependency file v1.0
+1449592047 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\main.cpp
+	<iostream>
+	<cstdlib>
+	<Seq.h>
+	<Fibonacci.h>
+	<Lucas.h>
+	<Pell.h>
+	<Triangular.h>
+	<Quadrados.h>
+	<Pentagonal.h>
+	<container.h>
+
+1450472901 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\seq.cpp
+	"Seq.h"
+
+1450473796 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\seq.h
+	<vector>
+	<iostream>
+
+1449586862 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\fibonacci.cpp
+	"Fibonacci.h"
+
+1449586414 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\fibonacci.h
+	<Seq.h>
+
+1449587022 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\lucas.cpp
+	"Lucas.h"
+
+1449253204 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\lucas.h
+	<Seq.h>
+
+1449587095 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\pell.cpp
+	"Pell.h"
+
+1449253561 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\pell.h
+	<Seq.h>
+
+1449587194 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\triangular.cpp
+	"Triangular.h"
+
+1449500225 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\triangular.h
+	<Seq.h>
+
+1449587130 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\quadrados.cpp
+	"Quadrados.h"
+
+1449254072 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\quadrados.h
+	<Seq.h>
+
+1449587115 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\pentagonal.cpp
+	"Pentagonal.h"
+
+1449254226 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\pentagonal.h
+	<Seq.h>
+
+1449590839 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\container.cpp
+	"container.h"
+
+1449590839 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\container.h
+	<Seq.h>
+
+1449592048 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\main.cpp
+	<iostream>
+	<cstdlib>
+	<Seq.h>
+	<Fibonacci.h>
+	<Lucas.h>
+	<Pell.h>
+	<Triangular.h>
+	<Quadrados.h>
+	<Pentagonal.h>
+	<container.h>
+
+1450473798 e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\seq.h
+	<vector>
+	<iostream>
+
+1449586416 e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\fibonacci.h
+	<Seq.h>
+
+1449253206 e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\lucas.h
+	<Seq.h>
+
+1449253562 e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\pell.h
+	<Seq.h>
+
+1449500226 e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\triangular.h
+	<Seq.h>
+
+1449254074 e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\quadrados.h
+	<Seq.h>
+
+1449254228 e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\pentagonal.h
+	<Seq.h>
+
+1449590840 e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\container.h
+	<Seq.h>
+
+1449590840 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\container.cpp
+	"container.h"
+
+1449586864 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\fibonacci.cpp
+	"Fibonacci.h"
+
+1449587024 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\lucas.cpp
+	"Lucas.h"
+
+1449587096 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\pell.cpp
+	"Pell.h"
+
+1449587116 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\pentagonal.cpp
+	"Pentagonal.h"
+
+1449587132 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\quadrados.cpp
+	"Quadrados.h"
+
+1450473798 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\seq.cpp
+	"Seq.h"
+
+1449587196 source:e:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\triangular.cpp
+	"Triangular.h"
+
+1449588448 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\main.cpp
+	<iostream>
+	<cstdlib>
+	<Seq.h>
+	<Fibonacci.h>
+	<Lucas.h>
+	<Pell.h>
+	<Triangular.h>
+	<Quadrados.h>
+	<Pentagonal.h>
+	<container.h>
+
+1450470198 i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\seq.h
+	<vector>
+	<iostream>
+
+1449582816 i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\fibonacci.h
+	<Seq.h>
+
+1449249606 i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\lucas.h
+	<Seq.h>
+
+1449249962 i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\pell.h
+	<Seq.h>
+
+1449496626 i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\triangular.h
+	<Seq.h>
+
+1449250474 i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\quadrados.h
+	<Seq.h>
+
+1449250628 i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\pentagonal.h
+	<Seq.h>
+
+1449587240 i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\include\container.h
+	<Seq.h>
+
+1449587240 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\container.cpp
+	"container.h"
+
+1449583264 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\fibonacci.cpp
+	"Fibonacci.h"
+
+1449583424 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\lucas.cpp
+	"Lucas.h"
+
+1449583496 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\pell.cpp
+	"Pell.h"
+
+1449583516 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\pentagonal.cpp
+	"Pentagonal.h"
+
+1449583532 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\quadrados.cpp
+	"Quadrados.h"
+
+1450470198 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\seq.cpp
+	"Seq.h"
+
+1449583596 source:i:\poo\poo_tpiv_davidsondias_mateusalves\2.1\src\triangular.cpp
+	"Triangular.h"
+
+1452057140 source:c:\users\mateus fellipe\downloads\2.1\main.cpp
+	<iostream>
+	<cstdlib>
+	<Seq.h>
+	<Fibonacci.h>
+	<Lucas.h>
+	<Pell.h>
+	<Triangular.h>
+	<Quadrados.h>
+	<Pentagonal.h>
+	<container.h>
+
+1450473798 c:\users\mateus fellipe\downloads\2.1\include\seq.h
+	<vector>
+	<iostream>
+
+1449586416 c:\users\mateus fellipe\downloads\2.1\include\fibonacci.h
+	<Seq.h>
+
+1449253206 c:\users\mateus fellipe\downloads\2.1\include\lucas.h
+	<Seq.h>
+
+1449253562 c:\users\mateus fellipe\downloads\2.1\include\pell.h
+	<Seq.h>
+
+1449500226 c:\users\mateus fellipe\downloads\2.1\include\triangular.h
+	<Seq.h>
+
+1449254074 c:\users\mateus fellipe\downloads\2.1\include\quadrados.h
+	<Seq.h>
+
+1449254228 c:\users\mateus fellipe\downloads\2.1\include\pentagonal.h
+	<Seq.h>
+
+1452055843 c:\users\mateus fellipe\downloads\2.1\include\container.h
+	<Seq.h>
+
+1449590840 source:c:\users\mateus fellipe\downloads\2.1\src\container.cpp
+	"container.h"
+
+1452056449 source:c:\users\mateus fellipe\downloads\2.1\src\fibonacci.cpp
+	"Fibonacci.h"
+
+1452056523 source:c:\users\mateus fellipe\downloads\2.1\src\lucas.cpp
+	"Lucas.h"
+
+1452056523 source:c:\users\mateus fellipe\downloads\2.1\src\pell.cpp
+	"Pell.h"
+
+1449587116 source:c:\users\mateus fellipe\downloads\2.1\src\pentagonal.cpp
+	"Pentagonal.h"
+
+1449587132 source:c:\users\mateus fellipe\downloads\2.1\src\quadrados.cpp
+	"Quadrados.h"
+
+1452050289 source:c:\users\mateus fellipe\downloads\2.1\src\seq.cpp
+	"Seq.h"
+
+1452056541 source:c:\users\mateus fellipe\downloads\2.1\src\triangular.cpp
+	"Triangular.h"
+
