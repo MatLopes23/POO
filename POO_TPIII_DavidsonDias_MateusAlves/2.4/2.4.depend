@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1446320763 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.4\main.cpp
+	<iostream>
+	<IntegerSet.h>
+	<vector>
+	<stdlib.h>
+
+1446737556 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.4\include\integerset.h
+	<array>
+	<iostream>
+
+1446320775 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.4\src\integerset.cpp
+	"IntegerSet.h"
+	<array>
+	<iostream>
+	<fstream>
+	<string>
+

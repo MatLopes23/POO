@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1446332280 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.7\main.cpp
+	<iostream>
+	<C.h>
+
+1446331631 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.7\src\a.cpp
+	"A.h"
+	<iostream>
+
+1446331631 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.7\include\a.h
+
+1446331631 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.7\src\b.cpp
+	"B.h"
+	<iostream>
+
+1446331631 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.7\include\b.h
+
+1446566638 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.7\src\c.cpp
+	"C.h"
+	<iostream>
+
+1446566638 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.7\include\c.h
+	<B.h>
+	<A.h>
+

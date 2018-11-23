@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1446497701 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.1\main.cpp
+	<iostream>
+	<cstdlib>
+	"CVetor.h"
+
+1446497033 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.1\src\cvetor.cpp
+	"CVetor.h"
+	<iostream>
+
+1446733516 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.1\include\cvetor.h
+	<iostream>
+

@@ -1,0 +1,357 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage[brazilian]{babel} 
+\usepackage[ansinew]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{lmodern}
+\usepackage{amsfonts} 
+\usepackage{enumerate}
+\setcounter{secnumdepth}{4} %
+\setcounter{tocdepth}{4}
+
+\title{Relatório III}
+\vspace{2cm}
+
+\author{Davidson dos Santos Dias\\
+ Mateus Fellipe Alves Lopes \\
+}
+
+
+\begin{document} 
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução}
+O trabalho tem como objetivo a criação de classes completas, envolvendo diversos tipos de \textbf{constutores}, \textbf{destrutores}, \textbf{atributos dinâmicos} e \textbf{sobrecarga de operadores} em C++, além da utilizaçaõ de mecanismos como \textbf{\textit{namespaces}}, \textbf{constantes}, \textbf{funções \textit{inline}}, \textbf{gerenciamento dinâmico de memória}, etc;\\\\
+As sobrecarga de operadores consiste na redefinição de itens já existentes, permitindo que sejam
+definidas duas ou mais funções com o mesmo nome, desde que suas listas de argumentos sejam diferentes para que não haja comflito sobre qual função deve ser chamanda. Os \textit{namespace} são agrupamentos lógicos dos métodos, assim é possível a criação de funções de mesmos nomes e parâmetros, definido-os em \textit{namespaces} distintos.
+\\
+\section{Desenvolvimento}
+	
+	Especificações das questões propostas utilizando programação orientada a objetos.
+
+\subsection{\textit{CVetor}}
+	Na questão 2.1 criamos um vetor usando os conceitos de classes, para isso encapsulamos um tamanho e um ponteiro para representar o tamanho do vetor e o vetor que será alocado a partir desse tamanho.\\\\
+ Por \textit{default} o \textbf{construtor} irá inicializar o tamanho em 0, assim não alocando nenhuma posição para o vetor.Toda a classe foi incluida em um \textit{namespace} \textbf{DataStrutures}.\\\\
+	O \textbf{construtor de cópia} recebe como parâmetro um objeto também da classe CVetor, copiando todos os atributos e elementos alocados dinamicamente do objeto-parâmetro corretamente.
+	
+	\subsubsection{\textit{Métodos e Operadores}}
+	Operadores sobrecarregados como função membro:
+	\begin{itemize}
+	\item O operador de atribuição \textbf{=} recebe um objeto como uma \textbf{referência constante} copiando os valores dos atributos alocados dinamicamente de forma correta.
+	\item Os operadores \textbf{()} e \textbf{[]} recebem um inteiro \textbf{constante} para indicar qual posição a ser acessada no vetor, retornando por \textbf{referência} o dado contido naquela posição.
+	\item Os operadores \textbf{+} e \textbf{-} utilizam dois vetores para somar/subtrair recebebendo um objeto do tipo \textsl{CVetor} como \textbf{referências constantes}. Os resultados são armazenados em um objeto auxiliar que será retornado por valor no final da operação.\\\end{itemize}
+	Operadores sobrecarregados como funções \textbf{\textit{friend}}:
+	\begin{itemize}
+	\item Os operadores de fluxo de entrada e saida(\textbf{<<} e \textbf{>>}) são utilizados para inserir/imprimir elementos do vetor a partir do tamanho inicialmente fornecido.
+	\end{itemize}
+Os métodos \textbf{escalar()} e \textbf{vetorial\_3D()} recebem um objeto da classe CVetor como \textbf{referência constante}.O primeiro retorna um inteiro representando o produto escalar entre os dois vetores, e o segundo foi restrito a vetores de 3 dimensões, sendo inviavel a representação com mais dimenções, e retorna um novo vetor por valor.\\\\
+O \textbf{destrutor} da classe ao ser invocado (final da execução) verifica se foi feita alguma alocação do vetor para que não haja problema no uso do \textit{delete[]} para posições não alocadas.
+
+\subsubsection{\textit{Parâmetros}}
+
+		\begin{itemize}
+    \item \texttt{CVetor(const CVetor\& h);}
+    \item \texttt{CVetor(const int n=1);}
+    \item \texttt{CVetor\& operator = (const CVetor\& h);}
+    \item \texttt{CVetor operator + (const CVetor\& h)const;}
+    \item \texttt{CVetor operator - (const CVetor\& h)const;}
+    \item \texttt{int\& operator [] (const int)const;}
+    \item \texttt{int\& operator () (const int)const;}
+    \item \texttt{int escalar(const CVetor\&) const;}
+    \item \texttt{CVetor vetorial\_3D(const CVetor\&) const;}
+    \item \texttt{friend std::ostream\& operator << (std::ostream\& op, const CVetor\& h);}
+    \item \texttt{friend std::istream\& operator >> (std::istream\& op, CVetor\& h).}
+			 \end{itemize}
+
+
+\subsection{\textit{Matriz}}
+	
+	Resolvemos a questão 2.2 encapsulando uma matriz dinâmica do tipo \textbf{double} em uma classe chamada \textbf{Matriz}, que contém os atributos \textbf{linhas} e \textbf{colunas} do tipo \textbf{inteiro}, e um método privado \textbf{Alocar()} que aloca a memória de acordo com os valores de linha e coluna.Toda a classe foi incluida em um \textit{namespace \textbf{Matematica}}.
+	\\\\Existem 2 \textbf{construtores} na classe:
+	\begin{itemize}
+	\item O primeiro recebe o número de linhas e colunas criando uma matriz com essas dimensões e inicializando os elementos da matriz com 0, e por \textit{default} inicializa linha e coluna com 0, logo não aloca memória para a matriz, pois geraria conflito na modificação do mesmo posteriormente, já que a memória da matriz não poderia ser redefinida após a sua inicialização.\end{itemize}
+	\begin{itemize}
+	\item O segundo é o \textbf{construtor de cópia} que recebe como parâmetro um objeto também da classe matriz, copiando todos os atributos e elementos alocados dinamicamente do objeto-parâmetro corretamente.\end{itemize}
+	
+	\subsubsection{\textit{Métodos e Operadores}}
+	Operadores sobrecarregados como função membro:
+	\begin{itemize}
+	\item O operador de atribuição \textbf{=} recebe um objeto como uma \textbf{referência constante} copiando os valores dos atributos alocados dinamicamente de forma correta.
+	\item Os operadores \textbf{+}, \textbf{-} e \textbf{*} recebe um objeto como uma \textbf{referência constante} por parâmetro e armazena o resultado em um objeto auxiliar que será retornado por valor no final da operação.
+	\item Os operadores \textbf{+=}, \textbf{-=} e \textbf{*=} recebem um objeto como uma \textbf{referência constante} por parâmetro e armazena o resultado no próprio objeto que será retornado por referência no final da operação através do ponteiro \textit{this}.
+	\item O operador\textbf{()} recebe dois inteiros \textbf{constantes} para indicar qual posição a ser acessada na Matriz(linha, coluna),retornando por \textbf{referência} o dado contido naquela posição.
+	\item Os operadores \textbf{*} e \textbf{*=} recebe um objeto do tipo \textsl{CVetor} ou um \textit{vector} como \textbf{referências constantes} por parâmetro. O resultado do operador \textbf{*} é armazenado em um objeto auxiliar que será retornado por valor no final da operação. E o resultado do operador \textbf{*=} é armazenado no proprio objeto que será retornado por referência no final da operação através do ponteiro \textit{this}.
+	\item Os operadores \textbf{<<} e \textbf{>>} recebem uma \textbf{string} como \textbf{referência constante}, indicando o nome de um arquivo, para gravar dados em aquivo e ler os dados de arquivo, respectivamente.
+\end{itemize}
+	Operadores sobrecarregados como funções \textbf{\textit{friend}}:
+	\begin{itemize}
+		\item Os operadores de fluxo de entrada e saída (\textbf{<<} e \textbf{>>}) por serem \textit{friend} tem acesso aos atributos da classe Matriz, facilitando a inserção e impressão de dados no objeto.
+			\end{itemize}
+			\textbf{grava()} recebe por parâmetro a \textit{referência} de uma \textit{string} como \textbf{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser criado ou modificado pela função \textbf{ofstream}, armazenando a matriz em disco.\\\\
+O \textbf{destrutor} da classe ao ser invocado (final da execução) necessita desalocar a Matriz com o auxilio do destrutor da \textit{struct} Link, caso contrário desalocaria apenas o ponteiro.
+
+\subsubsection{\textit{Parâmetros}}
+		\begin{itemize}
+				\item \texttt{Matriz(const Matriz\& h);}
+        \item \texttt{Matriz(const int l=0,const int c=0);}
+        \item \texttt{Matriz\& operator=(const Matriz\& );}
+        \item \texttt{Matriz operator+(const Matriz\& )const;}
+        \item \texttt{Matriz operator-(const Matriz\& )const;}
+        \item \texttt{Matriz\& operator+=(const Matriz\& );}
+        \item \texttt{Matriz\& operator-=(const Matriz\& );}
+        \item \texttt{Matriz operator*(const Matriz\& )const;}
+        \item \texttt{Matriz\& operator*=(const Matriz\& );}
+        \item \texttt{Matriz operator*(const std::vector<double>\& )const;}
+        \item \texttt{DataStrutures::CVetor operator*(const DataStrutures::CVetor\& vet)const;}
+        \item \texttt{Matriz\& operator*=(const DataStrutures::CVetor\& vet);}
+        \item \texttt{Matri\& operator*=(const std::vector<double>\& );}
+        \item \texttt{double\& operator()(const int i,const int j)const;}
+        \item \texttt{Matriz\& operator >> (const std::string\& nomeArquivo);}
+        \item \texttt{Matriz\& operator << (const std::string\& nomeArquivo)const;}
+				\item \texttt{int size\_coluna() const;}
+
+        \item \texttt{friend std::ostream\& operator << (std::ostream\& op, const Matriz\&);}
+        \item \texttt{friend std::istream\& operator >> (std::istream\& op,  Matriz\&).}
+			 \end{itemize}
+
+\subsection{\textit{Racional}}
+Na questão 2.3 utilizamos a definição de classes para realizar operações com números racionais, inicialmente criamos uma classe chamada \textbf{Racional} com atributos privados do tipo inteiro para representar o numerador e denominador, e um método também privado para manter os números racionais no formato irredutível, optamos por criá-la privada pois é um método utilizado apenas pela própria classe.Toda a classe foi incluida em um \textit{namespace \textbf{Matematica}}.
+\\\\
+O \textbf{Construtor} por default inicializa o numerador e o denominador como 0 e 1 respectivamente, e tratamos o caso de entrado 0 para o denominador, pois isso geraria indeterminação, e usado o método de simplificação antes do número ser armazenado no objeto.\\\\
+
+\subsubsection{\textit{Métodos e Operadores}}
+Os operadores \textbf{+}, \textbf{-}, \textbf{*} e \textbf{/} foram sobrecarregados como função membro recebendo um objeto como uma \textbf{referência constante} por parâmetro e armazena o resultado em um objeto auxiliar que será retornado por valor no final da operação.\\\\
+O operador de fluxo de saída (\textbf{<<}) foi sobrecarregado como função \textit{friend} para realizar a impressão de dados no objeto no formato a/b.\\\\
+O método \textbf{add()} define novos valores para o objeto a partir de dados fornecidos pelo usuário, por default o denominador recebe 1 para caso ele não seja especificado.\\\\
+Os métodos de impressão são \textit{constantes}, pois não ocorrerá modificação nos objetos, e são necessários pelo fato dos atributos serem privados a não termos acesso direto a eles.\\\\
+Foram criadas dois conversores: 
+\begin{itemize}
+	\item \textbf{\textit{double}} para \textbf{Racional}-> fornecido o número flutuante é feito uma conversão, para números indefinidos foi feito uma aproximação.
+	\item \textbf{Racional} para \textbf{\textit{double}}-> retorna a divisão do numerador e denominador para uma variável \textit{\textbf{double}}. 
+\end{itemize}
+
+\subsubsection{\textit{Parâmetros}}
+	      
+			\begin{itemize}
+				 \item \texttt{Racional(const int n=0, int d=1);}
+         \item \texttt{Racional(const double d);}
+         \item \texttt{void add(const int n, int d=1);}
+         \item \texttt{Racional operator - (const Racional\& )const;}
+         \item \texttt{Racional operator + (const Racional\& )const;}
+         \item \texttt{Racional operator * (const Racional\& )const;}
+         \item \texttt{Racional operator / (const Racional\& )const;}
+
+         \item \texttt{operator double()const;}
+
+         \item \texttt{friend std::ostream\& operator << (std::ostream\& op, const Racional\&);}
+
+        \item \texttt{void printflutuante()const.}
+				\end{itemize}
+			
+\subsection{\textit{IntegerSet}}
+			
+			Na questão 2.4 representamos os conjuntos com \textbf{arrays} do tipo \textbf{bool}, colocando \textbf{true} na posição que representa o valor contido no conjunto.\\Ex: A[9] =True => 9 pertence ao conjunto.\\\\
+			O \textit{array} de \textit{bool} foi ultilizado para facilitar algumas operações, utilizando métodos pré-definidos na classe \textit{array}.\\
+			Toda a classe foi incluida em um \textit{namespace \textbf{Matematica}}.\\\\
+			O \textbf{construtor} irá criar por default um conjunto vazio.
+
+	\subsubsection{\textit{Métodos e Operadores}}
+	Operadores sobrecarregados como função membro que recebem por parametro objetos com \textbf{referência constante}:
+	\begin{itemize}
+	\item Os operadores \textbf{+}(União) e \textbf{\&}(Interseção) armazenam os resultadso em um objeto auxiliar que será retornado por valor no final da operação.
+ \item O operador \textbf{==} retorna um valor do tipo bool indicado \textbf{true} caso os dois conjuntos sejam iguais e \textbf{false} caso contrário.
+\item Os operadores \textbf{+=} e \textbf{-=} inserem e removem elementos do conjunto respectivamente, inicialmente em cada sobrecarga verificam se o valor fornecido é valido, posteriormente alteram o \textit{array} de tamanho definido o valor na posição que representa o elemento do conjunto de \textbf{false} para \textbf{true} e \textbf{true} para \textbf{false} respectivamente.
+\item O operador \textbf{>>} recebe uma \textbf{string}, indicando o nome de um arquivo, para ler os dados do respectivos arquivo.\end{itemize}
+Operadores sobrecarregados como funções \textbf{\textit{friend}}:
+\begin{itemize}
+\item Os operadores de fluxo de entrada e saída (<< e >>) foram sobrecarregados como funções \textit{friend} para que tenha acesso aos atributos da classe IntegerSet, facilitando a inserção e impressão de dados no objeto.
+\end{itemize} 
+No programa para testar a classe usamos um \textit{vector} para armazenar a quantidade de conjuntos desejado.
+
+\subsubsection{\textit{Parâmetros}}
+				\begin{itemize}
+					\item \texttt{IntegerSet();}
+					\item \texttt{IntegerSet operator + (const IntegerSet\& )const;}
+					\item \texttt{IntegerSet operator \& (const IntegerSet\& )const;}
+					\item \texttt{IntegerSet\& operator += (const int );}
+					\item \texttt{IntegerSet\& operator -= (const int );}
+					\item \texttt{IntegerSet\& operator >> (const std::string\& nomeArquivo);}
+					\item \texttt{friend std::ostream\& operator << (std::ostream\& op, const IntegerSet\&);}
+					\item \texttt{friend std::istream\& operator >> (std::istream\& op, IntegerSet\&);}
+					\item \texttt{bool operator == (const IntegerSet\& x) const.}
+			 \end{itemize}
+
+
+\subsection{\textit{CWindow}}
+	Na questão 2.5 criamos uma classe \textbf{CWindow} para representar uma janela, utilizando objetos de classes distintas como atributos, \textbf{Canvas} e \textbf{Color}, a classe CWindow encapsula a classe Canvas que por sua vez contêm instâncias da classe Color.
+	\subsubsection{\textit{Color}}
+	Na classe \textbf{Color} encapsulamos cores em formato \textbf{RGB}, para isso utilizamos uma \textit{struct} com três inteiros, e uma string para armazenar o nome da cor. Para criarmos objetos dessa classe usamos uma estratégia para facilitar a visualização e evitar grandes quantidades de dados nos parâmetros das funções, convertemos uma \textsl{string} com o nome da cor para seu respectivo formato \textbf{RGB}, função essa nomeada de \textbf{colorir()}. Para simplificar e reduzir o código consideramos apenas oito cores distintas sendo elas: branco (255,255,255), azul (0,0,255), vermelho (255,0,0), verde (0,255,0), amarelo (255,255,0), magenta (255,0,255), ciano (0,255,255) e preto (0,0,0).\\\\
+	O \textbf{construtor} por \textsl{default} recebe uma \textsl{string} com a cor branca que inicializa o objeto invocando a função \textit{colorir()} que converte a \textsl{string} para o formato RGB.
+	\paragraph{\textit{Métodos :}}
+	
+	Desenvolvemos o método \textbf{set\_Color()} que recebe o nome de uma cor e recorre ao método \textbf{colorir()} para preencher a \textsl{struct RGB} com os valores característicos da cor.
+	\textbf{Cor()} retornar a \textsl{string nome\_cor} contida na \textsl{struct RGB}.
+	
+	\paragraph{\textit{Parâmetros}}
+	
+	\begin{itemize}
+					\item \texttt{Color(const string c="branco");}
+        
+					\item \texttt{void set\_Color(const string c);}
+        
+					\item \texttt{string Cor() const;}
+       
+				 \item  \texttt{void colorir(const string c).}
+         
+			 \end{itemize}
+			
+\subsubsection{\textit{Canvas}}
+Classe aninhada que armazena atributos de desenho da janela: cor da fonte, tamanho da fonte, tipo de fonte, cor da pena, cor do pincel.\\\\
+\textbf{Construtor} não possui um método \textsl{default} pois \textbf{Canvas} sempre será inicializado no \textbf{construtor} de \textbf{CWindow} com todos os valores.
+
+\paragraph{\textit{Métodos :}}
+
+\textbf{set\_fonte()}, \textbf{set\_pena()}, \textbf{set\_pincel()}, \textbf{set\_tamanho()} e \textbf{set\_tipo\_fonte()} são métodos que recebem por parâmetros \textsl{constantes} e alteram os atributos do objeto. Os métodos que alteram as instâncias da classe \textbf{Color} chamam o método \textit{set\_Color()} pois os atributos dela são restritos para a classe \textbf{Canvas}.\\\\
+\textbf{get\_fonte()}, \textbf{get\_pena()}, \textbf{get\_pincel()}, \textbf{get\_tamanho()} e \textbf{get\_tipo\_fonte()} são métodos \textsl{constantes} que retornam os valores dos atributos do objeto. Os métodos para retornar fonte, pena e pincel invocam o método \textbf{Cor()} da classe \textbf{Color}.
+	
+	
+	\paragraph{\textit{Parâmetros}}
+	
+	\begin{itemize}
+					\item \texttt{Canvas( const int tam\_fonte, const string tip\_fonte, const string font, const string pen, const string pince);}
+        
+					\item \texttt{void set\_fonte(const string font);}
+        
+					\item \texttt{void set\_pena(const string pen);}
+       
+				 \item  \texttt{void set\_pincel(const string pince);}
+				
+				\item  \texttt{void set\_tamanho(const int tamanho);}
+				
+				\item  \texttt{void set\_tipo\_fonte(const string tipo\_font);}
+				
+				\item  \texttt{string get\_fonte()const;}
+				
+				\item  \texttt{string get\_pena()const;}
+				
+				\item  \texttt{string get\_pincel()const;}
+				
+				\item  \texttt{int get\_tamanho()const;}
+				
+				\item  \texttt{string get\_tipo\_fonte()const.}
+			
+			 \end{itemize}
+			
+\subsubsection{\textit{CWindow}}
+A classe \textbf{CWindow} contém atributos que armazenam características da posição e dimensão da janela e um ponteiro do tipo \textbf{Canvas} com atributos de desenho da janela. Foram criadas funções testes para testa o construtor de copia e o operador de atribuição.\\\\
+O \textbf{construtor} do \textbf{CWindow} irá alocar o ponteiro da classe \textbf{Canvas} passando valores para o \textbf{construtor} da classe aninhada.\\\\
+O \textbf{construtor de cópia} recebe como parâmetro um objeto também da classe CWindow, copiando todos os atributos e elementos alocados dinamicamente do objeto-parâmetro corretamente.
+
+\paragraph{\textit{Métodos e Operadores:}}
+O operador de atribuição \textbf{'='} foi sobrecarregado como função membro recebendo um objeto como uma \textbf{referência constante} por parâmetro copiado os valores dos atributos alocados dinamicamente de forma correta.\\\\
+Os operadores de fluxo de entrada e saída (\textbf{<<} e \textbf{>>}) foram sobrecarregados como funções \textit{friend} para que tenha acesso aos atributos da classe CWindow, facilitando a inserção e impressão de dados do objeto.\\\\ 
+\textbf{Cset\_fonte()}, \textbf{Cset\_pena()}, \textbf{Cset\_pincel()}, \textbf{Cset\_tamanho()} e \\\textbf{Cset\_tipo\_fonte()} são métodos que recebem por parâmetros \textsl{constantes} e alteram os atributos do objeto. Os métodos que alteram as instâncias da classe \textbf{Canvas} chamando seus respectivos métodos, pois os atributos de \textbf{Canvas} são restritos para a classe \textbf{CWindow}.\\\\
+\textbf{Cget\_fonte()}, \textbf{Cget\_pena()}, \textbf{Cget\_pincel()}, \textbf{Cget\_tamanho()} e \\\textbf{Cget\_tipo\_fonte()} são métodos constantes que retornam os valores dos atributos do objeto. Os métodos para retornar invocam os métodos respectivos da classe \textbf{Canvas}.\\\\
+\textbf{move()} e \textbf{resive()} recebem novas características da posição e dimensão da janela, por parâmetros \textsl{constantes}.\\\\
+\textbf{show()} é um método \textsl{constante} que envia para a saída padrão a posição com largura e altura da janela.\\\\
+\textbf{LeDeArquivo()} recebe por parâmetro um \textsl{string} como \textsl{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser lido pela função \textbf{ifstream}, armazenando os valores na instancia da classe.\\\\
+\textbf{GravarArquivo()} recebe por parâmetro um \textsl{string} como \textsl{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser criado ou modificado pela função \textbf{ofstream}, armazenando  os dados da \textbf{CWindow}.\\\\
+\textbf{Destrutor} apenas desaloca o \textsl{ponteiro} da classe \textbf{Canvas} que foi alocado no \textbf{construtor} através da função \textbf{delete}.
+	
+	\paragraph{\textit{Parâmetros}}
+	
+	\begin{itemize}
+        
+		\item \texttt{Window(const CWindow\& h);}
+    \item \texttt{CWindow\& operator= (const CWindow\& h);}
+    \item \texttt{friend std::ostream\& operator << (std::ostream\& op, const CWindow\&);}
+    \item \texttt{friend std::istream\& operator >> (std::istream\& op, CWindow\&);}
+    \item \texttt{CWindow(const int newx=0,const int newy=0,const int newcx=10,const int newcy=10, const int tam\_fonte=12, const string tip\_fonte="Arial", const string font="preto", const string pen="preto", const string pince="preto");}
+    \item \texttt{void show() const;}
+    \item \texttt{void move(const int newx,const int newy);}
+    \item \texttt{void resize(const int newcx,const int newcy);}
+    \item \texttt{void Cset\_fonte(const string font);}
+    \item \texttt{void Cset\_pena(const string pen);}
+    \item \texttt{void Cset\_pincel(const string pince);}
+    \item \texttt{void Cset\_tamanho(const int tamanho);}
+    \item \texttt{void Cset\_tipo\_fonte(const string tipo\_font);}
+    \item \texttt{string Cget\_fonte()const;}
+    \item \texttt{string Cget\_pena()const;}
+    \item \texttt{string Cget\_pincel()const;}
+    \item \texttt{int Cget\_tamanho()const;}
+    \item \texttt{string Cget\_tipo\_fonte()const;}
+		\item \texttt{void LeDeArquivo(const std::string nomeArquivo);}
+    \item \texttt{void GravarArquivo(const std::string nomeArquivo).}
+			 \end{itemize}
+			
+	\subsubsection{\textit{CWindowSingleton}}
+Na classe \textbf{CWindowSingleton} alteramos a classe \textbf{CWindow} para o padrão \textit{singleton}, sendo possível criar apenas uma instancia para esta classe. Para isso colocamos o construtor como privado e utilizamos o método \textbf{*Instace()} de tipo \textsl{static} como o único ponto de acesso ao construtor, assim limitando a quantidade de objetos criados e retornado o endereço do objeto criado. Para conseguirmos identificar se já existe um objeto da classes usamos o ponteiro também de tipo \textsl{static}, *\textbf{instaceptr}, com o intuito de armazenar o endereço da primeira janela criada e retornar este endereço caso seja solicitado a criação de mais uma janela assim garantido que apenas um objeto seja criado.
+Para manter a unicidade da classe \textit{CWindowSingleton} o construtor de cópia e o operador de atribuição foram colocados como privado evintando assim que uma cópia seja criando em qualquer escopo.\\
+	
+	\textit{\textbf{Método e variavel static:}}
+
+		\begin{itemize}
+					\item \texttt{static CWindowSingleton *instaceptr;}
+        
+					\item \texttt{static CWindowSingleton *Instace();}
+         
+			 \end{itemize}
+	
+\subsection{\textit{Lista simplesmente encadeada}}
+	Na questão 2.6 criamos uma lista simplesmente encadeada usando os conceitos de classes, para isso encapsulamos uma \textbf{struct} de nome \textbf{Link} para representar um nó da lista, a struct contém seu próprio construtor e destrutor, que serão invocados na criação e exclusão de nó no momento que se deseja inserir/excluir um elemento da lista.\\\\
+	A classe \textbf{Lista\_encadeada} tem como atributo o ponteiro da struct Link, que aponta para o início da lista. Por \textit{default} o \textbf{construtor} irá apontar o ponteiro *Lista para 0. Toda a classe foi incluida em um \textit{namespace} \textbf{DataStrutures}.Além do mais foram criadas funções testes para o construtor de copia e o operador de atribuição.\\\\
+	O \textbf{construtor de cópia} recebe como parâmetro um objeto também da classe \textbf{Lista\_encadeada}, copiando todos os atributos e elementos alocados dinamicamente do objeto-parâmetro corretamente.
+	
+	\subsubsection{\textit{Métodos e Operadores}}
+	Operadores sobrecarregados como função membro que recebem por parametro objetos \textbf{constantes}:
+	\begin{itemize}
+	\item O operador de atribuição \textbf{=} recebe a \textbf{referência} de um objeto copiando os valores dos atributos alocados dinamicamente de forma correta.
+	\item Os operadores \textbf{+=} e \textbf{-=} recebem um inteiro para inserir/remover elementos da lista, armazenando o resultado no próprio objeto que será retornado por referência no final da operação através do ponteiro \textit{this}.
+	\item O operador\textbf{()} recebe um inteiro para indicar qual posição a ser acessada na Lista, retornando por \textbf{referência} o dado contido naquela posição.
+	\item Os operadores \textbf{+} e \textbf{+=} foram criados com o propósito de concatenar duas listas recebebendo um objeto do tipo \textsl{Lista\_encadeada} por \textbf{referências}. O resultado do operador \textbf{+} é armazenado em um objeto auxiliar que será retornado por valor no final da operação. E o resultado do operador \textbf{+=} é armazenado no próprio objeto que será retornado por referência no final da operação através do ponteiro \textit{this}.\end{itemize}
+	Operadores sobrecarregados como funções \textbf{\textit{friend}}:
+\begin{itemize}
+		\item Os operadores de fluxo de entrada e saída (<< e >>) foram criadas para que haja acesso aos atributos da classe Lista\_encadeada, facilitando a inserção e impressão de dados no objeto.\end{itemize}
+\textbf{LeDeArquivo()} recebe por parâmetro um string como \textbf{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser lido pela função \textbf{ifstream}, armazenando todos os inteiros na lista.
+\textbf{GravarArquivo()} recebe por parâmetro um string como \textbf{constante}, fornecida pelo usuário, que indica o nome do arquivo a ser criado ou modificado pela função \textbf{ofstream}, armazenando a lista no arquivo.\\\\
+O \textbf{destrutor} da classe ao ser invocado (final da execução) precisa invocar também o destrutor da \textit{struct} para que cada nó seja excluído separadamente.
+
+\subsubsection{\textit{Parâmetros}}
+			\begin{itemize}
+				\item \texttt{Lista\_encadeada(const Lista\_encadeada\& h);}
+        \item \texttt{Lista\_encadeada\& operator = (const Lista\_encadeada\& );}
+        \item \texttt{Lista\_encadeada operator + (const Lista\_encadeada\& ) const;}
+        \item \texttt{Lista\_encadeada\& operator += (const Lista\_encadeada\& );}
+        \item \texttt{Lista\_encadeada\& operator +=(const int d);}
+        \item \texttt{Lista\_encadeada\& operator -= (const int d);}
+        \item \texttt{int operator () (const int );}
+        \item \texttt{int size()const;}
+        \item \texttt{Lista\_encadeada();}
+        \item \texttt{void LeDeArquivo(const std::string\& nomeArquivo);}
+        \item \texttt{void GravarArquivo(const std::string\& nomeArquivo);}
+        \item \texttt{friend std::ostream\& operator << (std::ostream\& op, const Lista\_encadeada\& h);}
+        \item \texttt{friend std::istream\& operator >> (std::istream\& op, Lista\_encadeada\&).}
+			 \end{itemize}
+
+\subsection{\textit{Classe Derivada}}
+Na questão 2.7 usamos o conceito de herança para fazermos a derivação de \textbf{C} em relação a \textbf{A}, o fato de \textbf{C} ser derivado \textbf{A} torna possivel a classe \textbf{C} ser construida a partir do construtor de \textbf{A}, demonstramos isso a partir da inesistência do construtor de \textbf{C} e a utilização do \textit{cout} nos contrutores e destrutores das classes envolvidas (A,B,C).
+
+
+\section{Conclusão}
+Concluímos que o trabalho foi de essencial importância para colocarmos em pratica conceitos apresentados em sala de aula, conceitos de sobrecarga de operadores como funções membro e funções não-membro, construtor de cópia onde e tratado a de atributos dinamicos. Uma das principais dificuldades foi o tratamento das exceções para as funções de retorno, em alguns casos foi retornado um objeto vazio, o que significa a não execução do método, isso quando é retorno por valor, para os demais casos só será execultado o método quando o mesmo for possível.
+
+\section{Bibliografia}
+\begin{enumerate}
+\item Estivemos em discussão com a dupla de Jair Gomes e Kevin Jonas, e de Cristiano Antunes do 4º período de Engenharia de Sistemas, sobre os conceitos e usos de sobrecarga de operadores.
+\item $cplusplus.com$
+
+\end{enumerate}
+
+
+\end{document}

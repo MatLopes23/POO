@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1446735854 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.6\main.cpp
+	<iostream>
+	<Lista_encadeada.h>
+	<stdlib.h>
+
+1446737008 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.6\include\lista_encadeada.h
+	<string>
+
+1446333109 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.6\src\lista_encadeada.cpp
+	"Lista_encadeada.h"
+	<iostream>
+	<fstream>
+

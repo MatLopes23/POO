@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1445374728 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.2\main.cpp
+	<iostream>
+	<Matriz.h>
+	<string>
+	<vector>
+
+1445377392 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tp2_davidsondias_mateusalves\2.2\include\matriz.h
+	<string>
+	<vector>
+
+1446738143 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.2\main.cpp
+	<iostream>
+	<Matriz.h>
+	<string>
+	<vector>
+
+1446738142 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.2\include\matriz.h
+	<string>
+	<vector>
+	<iostream>
+	<CVetor.h>
+
+1446733859 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.2\include\cvetor.h
+	<iostream>
+
+1446733875 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.2\src\cvetor.cpp
+	"CVetor.h"
+	<new>
+	<iostream>
+
+1446738142 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiii_davidsondias_mateusalves\2.2\src\matriz.cpp
+	"Matriz.h"
+	<cstring>
+	<iostream>
+	<fstream>
+	<vector>
+
