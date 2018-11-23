@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1447777614 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\2.4\main.cpp
+	<iostream>
+	<cstdio>
+	<Racional.h>
+
+1447777096 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\2.4\include\racional.h
+	<iostream>
+
+1447777690 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\2.4\src\racional.cpp
+	"Racional.h"
+	<iostream>
+
+1452019839 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.4\main.cpp
+	<iostream>
+	<Racional.h>
+	<iterator>
+	<set>
+	<algorithm>
+	<fstream>
+
+1452020103 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.4\include\racional.h
+	<iostream>
+
+1452020053 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.4\src\racional.cpp
+	"Racional.h"
+	<iostream>
+
+1451417359 source:f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.4\main.cpp
+	<iostream>
+	<Racional.h>
+	<iterator>
+	<set>
+	<algorithm>
+	<fstream>
+
+1451417899 f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.4\include\racional.h
+	<iostream>
+
+1451416072 source:f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.4\src\racional.cpp
+	"Racional.h"
+	<iostream>
+

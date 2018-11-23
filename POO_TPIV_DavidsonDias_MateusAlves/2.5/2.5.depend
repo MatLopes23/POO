@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1452018606 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.5\main.cpp
+	<iostream>
+	<Graph.h>
+	<cstdlib>
+
+1448983034 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.5\src\graph.cpp
+	"Graph.h"
+	<iostream>
+
+1448982872 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.5\include\graph.h
+	<List.h>
+	<vector>
+	<Edge.h>
+
+1448982932 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.5\include\list.h
+	<string>
+
+1448982932 source:c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.5\src\list.cpp
+	"List.h"
+	<iostream>
+	<fstream>
+
+1452017941 c:\users\mateus fellipe\onedrive\engenharia de sistemas\4º periodo\poo\poo_tpiv_davidsondias_mateusalves\2.5\include\edge.h
+
+1448978246 source:f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.5\main.cpp
+	<iostream>
+	<Graph.h>
+
+1448979272 f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.5\include\graph.h
+	<List.h>
+	<vector>
+	<Edge.h>
+
+1448979332 f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.5\include\list.h
+	<string>
+
+1448741798 f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.5\include\edge.h
+
+1448979434 source:f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.5\src\graph.cpp
+	"Graph.h"
+	<iostream>
+
+1448979332 source:f:\programação orientada a objetos\poo_tpiv_davidsondias_mateusalves\2.5\src\list.cpp
+	"List.h"
+	<iostream>
+	<fstream>
+

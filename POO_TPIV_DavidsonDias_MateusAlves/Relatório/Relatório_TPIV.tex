@@ -1,0 +1,132 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage[brazilian]{babel} 
+\usepackage[ansinew]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{lmodern}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\setcounter{secnumdepth}{4} %
+\setcounter{tocdepth}{4}
+
+\title{Relatório IV}
+\vspace{2cm}
+
+\author{Davidson dos Santos Dias\\
+ Mateus Fellipe Alves Lopes \\
+}
+
+
+\begin{document} 
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução}
+O trabalho tem como objetivos a criação de \textbf{hierarquias simples de classes} e a sua programação em C++, incluindo a utilização de mecanismos de \textbf{herança}, \textbf{composição}, \textbf{polimorfismo} e \textbf{classes abstratas}, além da utilização de outros mecanismos da linguagem C++, como \textbf{templates}, a \textbf{biblioteca STL} e o \textbf{lançamento de exceções}.\\\\
+A \textbf{herança} e \textbf{composição} são um dos mecanismos mais caracteristicos da programação orientada a objetos, visto que com o uso correto deste é possivel derivar um classe de um classe(pai) , tornando a classe derivada um tipo da classe herdada, contendo na classe filha todos os metódos publicos e/ou protegidos da classe base (herança publica, privada ou protegida), criando assim inúmeros meios para resolver problemas no meio da programação, viabilizando ainda mais a POO.\\
+\section{Desenvolvimento}
+	
+	Especificações das questões propostas utilizando programação orientada a objetos.
+
+\subsection{\textit{Sequências}}
+	Na questão 2.1 criamos uma classe \textbf{Seq} com um \textit{vector} que a principio deveria ser \textit{static} mas não conseguimos implementar algum método que funcionasse o \textit{static}, testamos pelo método colocando \textbf{Seq} como um \textit{template} mas esbarramos no problema em que não conseguimos criar um ponteiro da classe \textbf{Seq} porque ela era um \textit{template} e necessitava de ser passado um tipo, tentamos também implementar um ponteiro do \textit{vector} mas a cada alocação o conteúdo do ponteiro era subscrevido. Optamos então por mandar o algoritmo que estava funcionando corretamente sem o \textit{static} junto com o algoritmo com o método utilizando o ponteiro para demonstrarmos o erro que estava acontecendo.\\\\
+Criamos então um \textit{vector} do tipo \textit{unsigned long int} privado na classe \textbf{Seq} e métodos para setar o vetor, inserindo elementos no \textit{vector}, limpar o \textit{vector}, retornar o elemento naquela posição, método para imprimir a sequência e operador de fluxo de saida. Os métodos para \textit{set}, \textit{get}, \textit{clear} e para gerar elementos da sequência foram colocados como protegidos para que na herança eles pudessem ser utilizados pelas classes filhas. Além de tornar a classe abstrata para que ela não pudesse ser instânciada.\\\\
+Herdamos 6 classes, \textbf{Fibonacci, Lucas, Pell, Triangular, Quadrados e Pentagonal}, da classe \textbf{Seq} e cada uma com um tipo diferente para gerar sua sequência e armazenar-la no \textit{vector} da classe base, e como elas foram herdadas da classe \textbf{Seq} todas eram manipuladas da mesma maneira somente com a sequências distintas.\\\\
+A classe \textbf{container} foi criada para armazernar qualquer tipo de \textbf{Seq} e por ele é possivel imprimir toda a sequência armazenada.\\\\
+Segue hierarquia das classes e seus métodos:
+	
+	\begin{figure}[!h]
+\includegraphics[width=17cm]{Diagrama1.jpg} 
+\caption{Diagrama}
+\label{Rotulo}
+\end{figure}
+
+\subsubsection{\textit{\textit{Parâmetros - Seq}}}
+	
+	\begin{itemize}
+		\item virtual unsigned long int elem(int i);
+    \item virtual void print(std::ostream\& os);
+    \item virtual int length();
+    \item virtual void imprimi(int i=-1,int j=-1);
+	\end{itemize}
+	
+ 
+\subsection{\textit{Matriz}}
+	
+	Na questão 2.2 modificamos a classe \textbf{Matriz}, já implementada nos trabalhos anteriores, para que a classe \textbf{Matriz} se tornasse genérica, usando o mecanismo de \textit{template}, é acrescentamos também o conceito de \textit{iterator}, criando uma nova classe alinhada em \textbf{Matriz}. Para criar uma matriz de um tipo específico, é preciso mudar o parâmetro nas as ocorrência da declaração da Matriz.\\\\
+Na classe alinhada \textbf{iterator}, sobrecarregamos alguns operadores necessários, tais como: 
+\begin{itemize}
+	\item O operador de atribuição;
+\item Operator* que retorna objeto que o \textit{iterator} está apontado no instante;
+\item Operator++ para incrementar o \textit{iterator}, de forma que ira percorrer a matriz linha por linha;
+\item Operator==, Operator!= e  Operator> que retornam true caso os \textit{iterators} sejam iguais, diferentes e maior que, respectivamente.
+\item E os métodos \textbf{begin()} e \textbf{end()}, que retornem \textit{iterators} para o início e um elemento após o final da matriz.
+\end{itemize}
+A \textbf{it\_maior()} é uma função\textit{template} que recebe como parâmetro dois \textit{iterators}, e retorna o \textit{iterator} que aponta para o maior valor.
+
+\subsection{\textit{Pesquisa em lista telefônica}}
+Na questão 2.3 implementamos um programa para fazer uma pesquisa em uma dada lista telefônica onde o usuário fornece um nome ou um número de telefone e o programa fornece os outros dados correspondentes. Para criação deste programa foi sugerido o uso do \textbf{map} e do \textbf{multimap} inclusos na biblioteca <map.h>.\\\\
+Na primeira opção de pesquisa, por nome, foi utilizada a estrutura do multimap, pois foi considerado o caso de um mesmo assinante ter mais de um endereço ou telefone, para constar um novo endereço ou telefone para o mesmo assinante deve se manter o padrão no arquivo do conjunto de três linhas para cada assinante, longo para o inserir outro endereço deve preencher todos os campos novamente. Assim usamos o nome como chave para uma\textit{ struct} com os dados do assinante, nome e endereço.\\\\
+Na segunda opção de pesquisa, por telefone, foi utilizado a estrutura do \textit{map}, onde usamos o número de telefone como chave de acesso para uma \textit{struct} com os dados do assinante, nome e endereço.
+O operador de fluxo de saída \textbf{<<} foi sobrecarregado para a impressão das duas \textit{structs} distintas presentes no programa.
+			
+\subsection{\textit{Racional}}
+			
+			Na questão 2.4 utilizamos a classe Racional implementada nos trabalhos anteriores, e acrescentamos outros métodos, tais como: sobrecarga de operadores e \textit{function object}.\\\\
+O operador de fluxo de entrada \textbf{>>} foi sobrecarregado para a efetuar a leitura de números na forma racional.
+O \textit{function object} foi implementado e usado para fazer a comparação entre os objetos da classe Racional, e posteriormente usado para ordenação dos objetos, o \textit{function object} é constituído por uma \textit{struct} com um método que retorna verdadeiro ou falso para uma comparação entre os objetos tipo Racional. A \textbf{maior\_menor()} retorna verdadeiro se o primeiro objeto for maior que o segundo, e a \textbf{menor\_maior()} retorna verdadeiro se o primeiro objeto for menor que o segundo.\\
+
+Para a gerenciamento do fluxo de entrada e saída usamos iterators:
+\begin{itemize}
+	\item O \textit{istream\_iterator} é um iterator de entrada, que lê elementos sequencialmente até um estado especial que indica o fim da entrada de elemento ou falha. O estado especial é representado especificadamente por \textit{eos}, é atribuímos um objeto do tipo ifstream a um objeto do tipo \textit{istream\_iterator} para fazer a leitura de arquivo.
+{itemize}
+   \item O \textit{ostream\_iterator} é um iterator de saída, que escreve elementos sequencialmente, sempre que o operador de \textbf{(=)} é utilizado um novo elemento e inserido no \textit{stream}, por isso o uso da função \textbf{copy()}, que irá copiar todo o \textit{container} e posteriormente imprimi-lo. Armazenamos os objetos Racionais em um \textit{set}, e para isso fizemos uso da \textit{function object}, que também e passada com parâmetro para o \textit{set}, assim possibilitando a ordenação interna através da comparação feita na \textit{function object}.
+\end{itemize}
+
+\subsection{Lista de Adjacência}
+	Na questão 2.5 representamos grafos com o conceito de Lista de adjacência, para isso usamos criamos as classes \textit{Graph} e \textit{Edge}.
+	\subsubsection{\textit{\textit{Edge}}}
+	A classe \textit{Edge} representa as arestas onde encapsula dois inteiros para simbolizar o par de vértices adjacentes, e métodos para setar e retornar algum dos vértices, e por \textit{default} ou vértice invalido os vértices são apontados para 0, pois a posição zero não é utilizada.
+	\subsubsection{\textit{\textit{Parâmetros - Edge}}}
+	
+	\begin{itemize}
+		\item Edge(const int a=0,const int b=0);
+    \item  int get\_inicio()const;
+    \item  int get\_fim()const;
+    \item  void set(const int a,const int b);
+		\item  virtual ~Edge();
+	\end{itemize}
+	
+	\subsubsection{\textit{\textit{Graph}}}
+	A classe \textit{Graph} representa o grafo encapsulando um \textit{vector} do tipo \textit{List}, o \textsl{List} usado foi o implementado por nós nos trabalhos anteriores, com o uso desta estrutura facilitamos a implementação da classe \textit{Graph}, tais como a inserção ordenada, tratamento de repetições, procura de elementos, entre outros, e também encapsulado inteiros para a contagem de vértices e arestas. Para essa representação de grafo não consideramos a posição zero no \textit{vector}, assim a contagem dos vértices é iniciada pelo primeira posição.
+	\subsubsection{\textit{\textit{Parâmetros - Graph}}}
+	
+	\textbf{Insert()} e \textbf{remove()} são métodos para inserção e remoção de arestas no grafo, onde retorna \textbf{true} se inserir ou remover corretamente, e \textbf{false} caso contrario, recebendo um objeto do tipo \textit{Edge} como referência constante.\\\\
+\textbf{get\_vertices()} e \textbf{get\_arestas()} retornam a quantidade de vértices e arestas respectivamente.\\\\
+\textbf{coonnectedComponentes()} retorna o número de subgrafos existentes no grafo, para isso usamos também um outro método privado \textbf{DFS()} que faz uma busca em profundidade na lista de adjacência, como foi dito que o grafo será não-direcionado podemos fazer a contagem pela quantidade de vezes que o método \textbf{DFS()} é chamado.\\\\
+\textbf{edge()} retorna true quando a \textit{Edge} passada por parâmetro estiver presente no grafo e \textbf{false} caso contrario.\\\\
+O operador de fluxo de saída \textbf{(<<)} foi sobrecarregado de forma que todo o grafo seja impresso por completo.\\\\
+O construtor recebe um inteiro que indica a quantidade de vértices do grafo e a partir desse valor e feita a alocação de memoria no \textit{vector} e por \textit{default} é alocado apenas um vértice, não considerando o zero. No destrutor é feita a desalocação do vector.\\
+
+
+\section{Conclusão}
+Concluímos que o trabalho foi de essencial importância para colocarmos em pratica conceitos apresentados em sala de aula, conceitos de hierarquias de classes. Além de termos que estudar e pesquisar sobre assuntos que não foram abordados em sala, exigindo mais empenho para entendimento do assunto. Uma das principais dificuldades foi na questão 2.1 das sequências onde não conseguimos implementar o \textsl{static} na classe base mesmo tentando implementar alguns métodos pesquisados e tendo ajuda dos colegas e do professor. Do mais o trabalho foi de grandíssima importância para o encerramento de toda a matéria da disciplina, nos deixando com uma base firme para que possamos posteriormente aprofundarmos sem grande dificuldade em áreas afins. 
+
+\section{Bibliografia}
+\begin{enumerate}
+\item Estivemos em discussão com a dupla de Jair Gomes e Kevin Jonas, e de Cristiano Antunes do 4º período de Engenharia de Sistemas, sobre os conceitos de polimorfismos, \textit{template} e \textsl{iterator}.
+\item $cplusplus.com$
+\item $http://www.yolinux.com/TUTORIALS/CppStlMultiMap.html$
+\item $http://stackoverflow.com/questions/12796580/static-variable-for-each-derived-class$
+\item \textit{Livro: Thinking in C++ Volume.1.SE-2000}
+\item \textit{Livro: Conceitos de computação com o essencial de C++, Cay Horstman, 3º edição}
+\end{enumerate}
+
+
+\end{document}
